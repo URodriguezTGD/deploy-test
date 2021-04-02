@@ -2,8 +2,33 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.page-footer {
+  background: #00458a;
+}
+
+.page-footer .footer-copyright {
+  background: #008cc7;
+}
+
+.page-footer .mdi {
+  font-size: 2em;
+  margin-right: .3em;
+}
+
+.page-footer .logo {
+  font-size: 3em;
+}
+
+nav {
+  background: #ffffff;
+}
+
+nav li a {
+  color: #008cc7;
+  font-weight: 600;
 }
 
 a {
@@ -12,5 +37,27 @@ a {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+}
+/*# sourceMappingURL=globals.css.map */
