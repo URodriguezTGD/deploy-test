@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins;
 }
 
 .page-footer {
@@ -46,11 +47,14 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #008cc7;
 }
 
 h3 {
   font-size: 16px;
+  color: #00458a;
 }
 
 h4 {
@@ -59,5 +63,6 @@ h4 {
 
 p {
   font-size: 16px;
+  color: #868686;
 }
 /*# sourceMappingURL=globals.css.map */
