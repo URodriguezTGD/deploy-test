@@ -1,0 +1,41 @@
+$accent: #008cc7;
+
+.hero {
+    min-height: 80vh;
+    text-align: center;
+    background-image: url("../components/images/bt-hero-img.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroContent {
+    max-width: 800px;
+    color: #fff;
+    text-align: center;
+    width: 42vw;
+    h1 {
+        font-size: 72px;
+        font-weight: 800;
+        letter-spacing: normal;
+        text-shadow: 2px 2px 4px #4d4d4d;
+        line-height: 1.4em;
+    }
+    p {
+        font-size: 50px;
+    }
+    a {
+        display: inline-block;
+        color: #fff;
+        font-weight: 600;
+        // border: 3px solid #fff;
+        border-radius: 5px;
+        padding: 15px 30px;
+        margin-right: 20px;
+        text-decoration: none;
+        font-size: 28px;
+        background:$accent;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
