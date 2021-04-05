@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-family: Poppins;
 }
 
@@ -30,6 +30,43 @@ nav {
 nav li a {
   color: #008cc7;
   font-weight: 600;
+}
+
+nav li a .none {
+  display: none;
+}
+
+nav .nav-menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 80px;
+  left: -100%;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+nav .ham {
+  font-size: 3em;
+  color: #008cc7;
+}
+
+nav .logoMenu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav .only-mobile {
+  display: none;
 }
 
 a {
@@ -64,5 +101,39 @@ h4 {
 p {
   font-size: 16px;
   color: #868686;
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    position: relative;
+  }
+  nav .ham-container {
+    position: absolute;
+    left: 7.5%;
+  }
+  nav .nav-menu-mobile.active {
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 1;
+  }
+  nav .active {
+    left: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  nav li a {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+  nav li a:hover {
+    background-color: #f7f7f7;
+  }
+  nav .only-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=globals.css.map */

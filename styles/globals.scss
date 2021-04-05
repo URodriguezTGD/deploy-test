@@ -1,8 +1,4 @@
-$accent: #008cc7;
-$accentDark: #00458a;
-$Base: #ffffff;
-$Light: #f7f7f7;
-$Dark: #868686;
+@import 'colors';
 
 html,
 body {
@@ -31,6 +27,32 @@ nav {
   li a{
     color: $accent;
     font-weight: 600;
+    .none{
+      display: none;
+    }
+  }
+  .nav-menu-mobile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .ham {
+    font-size: 3em;
+    color: $accent;
+  }
+  .logoMenu{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .only-mobile{ 
+    display: none;
   }
 }
 a {
@@ -60,4 +82,35 @@ h4 {
 p {
   font-size: 16px;
   color: $Dark;
+}
+
+@media screen and (max-width: 992px){
+  nav{
+    position: relative;
+    .ham-container{
+      position: absolute;
+      left: 7.5%;
+    }
+    .nav-menu-mobile.active{
+      background-color: $Base;
+      opacity: 1;
+      z-index: 1;
+    }
+    .active{
+      left: 0;
+      transition: all 0.5s ease;
+    }
+    li a{
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
+    li a:hover{
+      background-color: $Light;
+    }
+    .only-mobile{ 
+      display: flex;
+    }
+  }
 }
