@@ -28,11 +28,13 @@ export default function Layout({ children }) {
                     rel="stylesheet"
                     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 />
+                <link
+                    href="https://fonts.googleapis.com/css?family=Poppins"
+                    rel="stylesheet"
+                ></link>
             </Head>
             <NavBar />
-            <main>
-                {children}
-            </main>
+            <main>{children}</main>
             <Footer />
         </>
     );

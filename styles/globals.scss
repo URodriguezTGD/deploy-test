@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins;
 }
 
 .page-footer {
@@ -45,14 +46,18 @@ h1 {
   font-size: 24px;
 }
 h2 {
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 600;
+  color: $accent;
 }
 h3 {
   font-size: 16px;
+  color: $accentDark;
 }
 h4 {
   font-size: 12px;
 }
 p {
   font-size: 16px;
+  color: $Dark;
 }
