@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EAEb,WAAW,EAAE,OAAO;CAIvB",
+    "sources": [
+        "Services.module.scss"
+    ],
+    "names": [],
+    "file": "Services.module.css"
+}
