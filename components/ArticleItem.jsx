@@ -1,13 +1,25 @@
 import React from 'react'
 import articleStyle from '../styles/Article.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
+
 
 export const ArticleItem = ({article}) => {
     return (
         <Link href='/article/[id]' as={`/article/${article.id}`}>
             <a className={articleStyle.card}>
-                <h3>{article.title} &rarr;</h3>
-                <p>{article.body}</p>
+                <Image 
+                    src='/images/bt-services.png'
+                    alt="Picture of the author"
+                    width={295}
+                    height={213}
+                    className={articleStyle.img}
+                />
+                <div className={articleStyle.cardContent}>
+                    <h3>{article.title}</h3>
+                    <p>{article.body}</p>
+                    <span className='right'>Leer mas <span className='mdi mdi-arrow-right'></span></span>
+                </div>
             </a>
         </Link>
     )
