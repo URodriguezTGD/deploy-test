@@ -5,5 +5,39 @@
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f7f7;
+}
+
+.container .imageContainer {
+  width: 50%;
+}
+
+.container .servicesContainer {
+  width: 50%;
+  padding: 1% 5% 0 6%;
+  background-color: #f7f7f7;
+}
+
+@media screen and (max-width: 992px) {
+  .container .imageContainer {
+    display: none;
+  }
+  .container .servicesContainer {
+    width: 100%;
+  }
+  .container .servicesContainer h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .servicesContainer .servicesDesc {
+    display: none;
+  }
 }
 /*# sourceMappingURL=Services.module.css.map */

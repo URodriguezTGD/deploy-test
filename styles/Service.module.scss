@@ -1,0 +1,50 @@
+.serviceContainer{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .serviceImage{
+        border-radius: 15px; 
+        min-height: 200px;
+    }
+    p{
+        max-width: 450px;
+    }
+    .serviceText{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 992px){
+    .serviceContainer{
+        flex-direction: row;
+        .title{
+            display: none;
+        }
+        .par{
+            display: none;
+        }
+        .imageContainerSmall{
+            max-width: 150px;
+            max-height: 100px;
+        }
+        .imageContainerMed{
+            max-width: 300px;
+            max-height: 250px;
+        }
+        .serviceText{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 75%;
+            left: 4%;
+        }
+        .reverseText{
+            margin-right: 50px;
+        }
+    }
+    .reverse{
+        flex-direction: row-reverse;
+    }
+}

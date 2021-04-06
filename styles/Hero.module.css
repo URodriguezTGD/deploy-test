@@ -13,10 +13,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 50px;
 }
 
 .heroContent {
   max-width: 800px;
+  min-width: 600px;
   color: #fff;
   text-align: center;
   width: 42vw;
@@ -28,6 +30,7 @@
   letter-spacing: normal;
   text-shadow: 2px 2px 4px #4d4d4d;
   line-height: 1.4em;
+  margin-bottom: 50px;
 }
 
 .heroContent p {

@@ -1,0 +1,11 @@
+@import 'colors';
+
+.serviceContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.grayBackground{
+    background-color: $Light;
+}

@@ -1,9 +1,14 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import Head from "next/head";
-import { TitleSection } from '../components/TitleSection';
-import { ServiceContainer } from '../components/ServiceContainer';
+import { TitleSection } from '../../../components/TitleSection';
+import { ServiceContainer } from '../../../components/ServiceContainer';
+import { route } from 'next/dist/next-server/server/router';
 
-export default function services() {
+function index() {
+    const router = useRouter();
+    const { id } = router.query;
+
     const servicesAdmin = [
         {src: '/images/fiscal.jpeg', title:'Litigio', desc:'Ofrecemos atención especializada en todo tipo de controversias que deriven de la actividad del Estado, ya sea federal o local. Esto sea a través de los recursos administrativos ante la misma autoridad o a través de la via judicial.', reverse: false, small: false },
         {src: '/images/administrativo.jpeg', title:'Regulatorio', desc:'En el ámbito regulatorio, te asesoramos en materia de regulación pública en todo tipo de industrias, y los apoyamos en sus trámites y/o gestiones ante las autoridades competentes en todos los niveles de gobierno.', reverse: true, small: false }
@@ -18,12 +23,18 @@ export default function services() {
     return (
         <div>
             <Head>
-                <title>Servicios | BrainTax</title>
+                <title>Derecho { id } | BrainTax</title>
             </Head>
             <TitleSection title='Soluciones' desc='Expertos en la práctica del derecho administrativo, corporativo y fiscal.' />
-            <ServiceContainer title='Derecho Administrativo' services={servicesAdmin} gray={true} />
-            <ServiceContainer title='Derecho Corporativo' services={servicesCorpo} gray={false} />
-            <ServiceContainer title='Derecho Fiscal' services={servicesFiscal} gray={true} />
+            {(() => {
+                switch (router.query.id) {
+                    case "administrativo":   return (<ServiceContainer title='Derecho Administrativo' services={servicesAdmin} gray={true} />);
+                    case "corporativo": return (<ServiceContainer title='Derecho Corporativo' services={servicesCorpo} gray={true} />);
+                    case "fiscal":  return (<ServiceContainer title='Derecho Fiscal' services={servicesFiscal} gray={true} />);
+            }
+      })()}
         </div>
     )
 }
+
+export default index

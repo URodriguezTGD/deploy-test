@@ -1,3 +1,5 @@
+@import 'colors';
+
 .container {
     display: flex;
     // flex-direction: column;
@@ -5,4 +7,32 @@
     // justify-content: center;
     // text-align: center;
     // padding: 3.5em 27%;
+    align-items: center;
+    background-color: $Light;
+    .imageContainer{
+        width: 50%;
+    }
+    .servicesContainer{
+        width: 50%;
+        padding: 1% 5% 0 6%;
+        background-color: $Light;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        .imageContainer{
+            display: none;
+        }
+        .servicesContainer{
+            width: 100%;
+            h2{
+                display: flex;
+                justify-content: center;
+            }
+            .servicesDesc{
+                display: none;
+            }
+        }
+    }
 }

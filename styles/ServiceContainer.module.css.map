@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,iBAAiB,CAAA;EACb,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,aAAa,EAAE,IAAI;CACtB;;AACD,AAAA,eAAe,CAAA;EACX,gBAAgB,ECNZ,OAAO;CDOd",
+    "sources": [
+        "ServiceContainer.module.scss",
+        "colors.scss"
+    ],
+    "names": [],
+    "file": "ServiceContainer.module.css"
+}
