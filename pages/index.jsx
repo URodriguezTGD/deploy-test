@@ -7,8 +7,6 @@ import styles from "../styles/Home.module.scss";
 import { Services } from "../components/Services";
 
 export default function Home({articles}) {
-console.log("🚀 ~ file: index.js ~ line 6 ~ Home ~ articles", articles)
-    
     return (
         <div>
             <Head>
