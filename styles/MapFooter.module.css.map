@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,UAAU;EAC3B,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "MapFooter.module.scss"
+    ],
+    "names": [],
+    "file": "MapFooter.module.css"
+}

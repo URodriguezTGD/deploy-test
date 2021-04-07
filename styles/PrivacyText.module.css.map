@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACN,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,UAAU;EACvB,IAAI,EAAE,GAAG;CAIZ;;AATD,AAMI,UANM,CAMN,CAAC,CAAA;EACG,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "PrivacyText.module.scss"
+    ],
+    "names": [],
+    "file": "PrivacyText.module.css"
+}

@@ -1,0 +1,212 @@
+.formContainer {
+  padding: 50px;
+  background-color: #f7f7f7;
+  position: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formContainer .form {
+  position: relative;
+  max-width: 60vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.formContainer .form .row {
+  margin-bottom: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.formContainer .form .row .terms {
+  padding-left: 10px;
+  font-size: 16px;
+  position: relative;
+  bottom: 8px;
+}
+
+.formContainer .form .row .terms a {
+  color: #008cc7;
+  font-weight: bold;
+}
+
+.formContainer .form input[type="text"], .formContainer .form input[type="password"], .formContainer .form textarea {
+  width: 100%;
+  height: 40px;
+  padding: 10px 10px 10px 90px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+}
+
+.formContainer .form textarea {
+  height: auto;
+  min-height: 200px;
+  padding: 50px 10px 10px 10px;
+}
+
+.formContainer .form input[type="text"] + label, .formContainer .form input[type="password"] + label, .formContainer .form textarea + label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 80px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: white;
+  background: #0288D1;
+  border-radius: 3px 0 0 3px;
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  -webkit-transform: translateZ(0) translateX(0);
+          transform: translateZ(0) translateX(0);
+}
+
+.formContainer .form textarea + label {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+
+.formContainer .form input[type="text"]:focus, .formContainer .form input[type="password"]:focus {
+  padding-left: 10px;
+}
+
+.formContainer .form textarea:focus {
+  padding-top: 10px;
+}
+
+.formContainer .form input[type="text"]:focus + label, .formContainer .form input[type="password"]:focus + label {
+  -webkit-transform: translateZ(0) translateX(-100%);
+          transform: translateZ(0) translateX(-100%);
+}
+
+.formContainer .form textarea:focus + label {
+  -webkit-transform: translateZ(0) translateY(-100%);
+          transform: translateZ(0) translateY(-100%);
+}
+
+.formContainer .form input[type="checkbox"] {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+}
+
+.formContainer .form input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: #ccc;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+}
+
+.formContainer .form input[type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 10px;
+  top: 50%;
+  left: 50%;
+  background: white;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9) 0.1s;
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9) 0.1s;
+  -webkit-transform: translateZ(0) translate(-50%, -50%) scale(0);
+          transform: translateZ(0) translate(-50%, -50%) scale(0);
+}
+
+.formContainer .form input[type="checkbox"]:checked + label {
+  background: #0288D1;
+}
+
+.formContainer .form input[type="checkbox"]:checked + label:before {
+  -webkit-transform: translateZ(0) translate(-50%, -50%) scale(1);
+          transform: translateZ(0) translate(-50%, -50%) scale(1);
+}
+
+.formContainer .form button {
+  position: relative;
+  overflow: hidden;
+  width: 35vw;
+  height: 40px;
+  left: 50%;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: white;
+  border: none;
+  background: #0288D1;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  -webkit-transform: translateZ(0) translateX(0);
+          transform: translateZ(0) translateX(0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+.formContainer .form button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #01579B;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  -webkit-transform: translateZ(0) scale(0);
+          transform: translateZ(0) scale(0);
+  z-index: -1;
+}
+
+.formContainer .form button:hover:before, .formContainer .form button:focus:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+}
+
+@media screen and (max-width: 992px) {
+  .formContainer .form {
+    max-width: 75vw;
+  }
+}
+/*# sourceMappingURL=FormContainer.module.css.map */

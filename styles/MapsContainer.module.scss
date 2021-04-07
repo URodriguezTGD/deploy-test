@@ -1,0 +1,10 @@
+.mapsContainer{
+    margin-bottom: 50px;
+    .map{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75%;
+        height: 50vh;
+    }
+}
