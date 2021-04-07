@@ -1,10 +1,11 @@
+import React from 'react'
 import articleStyles from '../styles/Article.module.css';
 import { ArticleItem } from './ArticleItem';
-export const ArticleList = ({articles}) => {
+
+export const ArticleGrid = ({articles}) => {
     return (
         <div className={articleStyles.container}>
-            <h2 className='center'>Noticias</h2>
-            <div className={articleStyles.slider}>
+            <div className={articleStyles.grid}>
                 {
                     articles.map((article) => (<ArticleItem key={article.id} article={article} />)  )
                 }

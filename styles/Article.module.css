@@ -2,7 +2,7 @@
   padding: 4em 2em 6em 4em;
 }
 
-.grid {
+.slider {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -23,9 +23,28 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  animation: moveSlideshow 02s linear 2 alternate-reverse;
-  -webkit-animation-delay: 3000ms;
-          animation-delay: 3000ms;
+  animation: moveSlideshow 02s linear 3000ms 2 alternate-reverse;
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid .card {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  -webkit-animation: none;
+          animation: none;
 }
 
 @-webkit-keyframes moveSlideshow {
