@@ -25,7 +25,7 @@ export const Services = () => {
                 <p className={servicesStyles.servicesDesc} >Entregas comprometidas a ser flexibles, transparentes y sin costos innecesarios.</p>
                 {services.map(service => {
                     return (
-                        <Link href='/service/[id]' as={`/service/${service.id}`}>
+                        <Link key={service.id} href='/service/[id]' as={`/service/${service.id}`} >
                             <a>
                                 <Service src={service.src} title={service.title} desc={service.desc} reverse={service.reverse} small={service.small} />
                             </a>

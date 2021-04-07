@@ -1,0 +1,13 @@
+.mapsContainer {
+  margin-bottom: 50px;
+}
+
+.mapsContainer .map {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 75%;
+  height: 50vh;
+}
+/*# sourceMappingURL=MapsContainer.module.css.map */
