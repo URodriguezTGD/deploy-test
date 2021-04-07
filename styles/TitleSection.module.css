@@ -19,5 +19,12 @@
 
 .container p {
   max-width: 450px;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .container p {
+    max-width: 75vw;
+  }
 }
 /*# sourceMappingURL=TitleSection.module.css.map */
