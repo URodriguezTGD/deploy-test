@@ -1,5 +1,4 @@
 import Head from "next/head";
-import React from "react";
 import { ArticleGrid } from "../components/ArticleGrid";
 import { TitleSection } from "../components/TitleSection";
 
