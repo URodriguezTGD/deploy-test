@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export const ArticleItem = ({article}) => {
     return (
-        <Link href='/article/[id]' as={`/article/${article.id}`}>
+        <Link href='/article/[id]' as={`/article/${article.slug}`}>
             <a className={articleStyle.card}>
                 <Image 
                     src='/images/bt-services.png'
@@ -17,7 +17,7 @@ export const ArticleItem = ({article}) => {
                 />
                 <div className={articleStyle.cardContent}>
                     <h3>{article.title}</h3>
-                    <p>{article.body}</p>
+                    <p>{article.textContent}</p>
                     <span className='right'>Leer mas <span className='mdi mdi-arrow-right'></span></span>
                 </div>
             </a>
