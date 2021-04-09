@@ -4,12 +4,16 @@ import Link from 'next/link';
 import { Service } from '../components/Service';
 import servicesStyles from "../styles/Services.module.css";
 
+// imports i18n
+import { useRouter } from 'next/router';
+import es from '../locales/Services/Services_es';
+import en from '../locales/Services/Services_en';
+
 export const Services = () => {
-    const services = [
-        {id: 'administrativo', src:'/images/administrativo.jpeg', title:'Derecho Administrativo', desc:'Atencion especializada en todo tipo de controversias que deriven de la actividad del Estado, ya sea federal o local.', reverse:false, small:true},
-        {id: 'corporativo', src:'/images/corporativo.jpeg', title:'Derecho Corporativo', desc:'Servicio en la constitución de empresas a través de los vehiculos establecidos en las leyes mexicanas.', reverse:false, small:true},
-        {id: 'fiscal', src:'/images/fiscal.jpeg', title:'Derecho Fiscal', desc:'Elaboramos e interpretamos medios de defensa en contra de las actuaciones de las autoridades fiscales.', reverse:false, small:true}
-    ];
+    // Selecting language
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'es' ? es : en;
     return (
         <div className={servicesStyles.container}>
             <div className={servicesStyles.imageContainer}>
@@ -21,9 +25,9 @@ export const Services = () => {
             />
             </div>
             <div className={servicesStyles.servicesContainer}>
-                <h2>Servicios</h2>
-                <p className={servicesStyles.servicesDesc} >Entregas comprometidas a ser flexibles, transparentes y sin costos innecesarios.</p>
-                {services.map(service => {
+                <h2>{t.title}</h2>
+                <p className={servicesStyles.servicesDesc}>{t.desc}</p>
+                {t.services.map(service => {
                     return (
                         <Link key={service.id} href='/service/[id]' as={`/service/${service.id}`} >
                             <a>
@@ -31,21 +35,6 @@ export const Services = () => {
                             </a>
                         </Link>
                 )})}
-                {/* <Link href='/service/[id]' as={`/service/${services.id}`}>
-                    <a>
-                        <Service src='/images/administrativo.jpeg' title='Derecho Administrativo' desc='Atencion especializada en todo tipo de controversias que deriven de la actividad del Estado, ya sea federal o local.' reverse={false} small={true}/>
-                    </a>
-                </Link>
-                <Link href='/service/[id]' as={`/service/2`}>
-                    <a>
-                        <Service src='/images/corporativo.jpeg' title='Derecho Corporativo' desc='Servicio en la constitución de empresas a través de los vehiculos establecidos en las leyes mexicanas.' reverse={false} small={true}/>
-                    </a>
-                </Link>
-                <Link href='/service/[id]' as={`/service/3`}>
-                    <a>
-                        <Service src='/images/fiscal.jpeg' title='Derecho Fiscal' desc='Elaboramos e interpretamos medios de defensa en contra de las actuaciones de las autoridades fiscales.' reverse={false} small={true}/>
-                    </a>
-                </Link> */}
             </div>
         </div>
     );

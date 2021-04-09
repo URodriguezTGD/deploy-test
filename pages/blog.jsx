@@ -3,15 +3,24 @@ import React from "react";
 import { ArticleGrid } from "../components/ArticleGrid";
 import { TitleSection } from "../components/TitleSection";
 
+// imports i18n
+import { useRouter } from 'next/router';
+import es from '../locales/Blog/Blog_es';
+import en from '../locales/Blog/Blog_en';
+
 export default function blog({ articles }) {
+    // Selecting language
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'es' ? es : en;
     return (
         <div>
             <Head>
-                <title>Blog | BrainTax</title>
+                <title>{t.head}</title>
             </Head>
             <TitleSection
-                title="Blog"
-                desc="Te mantendremos al día con las noticias más relevantes del área legal."
+                title={t.title}
+                desc={t.desc}
             />
             <ArticleGrid articles={articles} />
         </div>

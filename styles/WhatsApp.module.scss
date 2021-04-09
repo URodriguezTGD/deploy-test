@@ -1,0 +1,236 @@
+@import 'colors';
+
+.whatsappContainer{
+    background-color: $DarkText;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    border-radius: 25px;
+    width: 19vw;
+    min-width: 265px;
+    max-width: 290px;
+    height: 3.2rem;
+    min-height: 50px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    .logo{
+        margin-bottom: 0.2rem;
+    }
+    h5{
+        font-weight: bold;
+        margin-left: 0.8rem;
+        margin-bottom: 0.65rem;
+        font-size: 16px;
+        color: $Base;
+    }
+    .formContainer{
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+        z-index: 50;
+    }
+}
+.whatsappContainer:active{
+    background-color: $DarkText;
+}
+
+.open{
+    animation: opening 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.close{
+    animation: closing 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.displaynt{
+    animation: noneDisplay 0.3s linear;
+    animation-fill-mode: forwards;
+}
+
+.show{
+    position: relative;
+    left: -40px;
+    animation: showCard 0.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 320px;
+    .equis{
+        font-size: 2.5rem;
+        position: relative;
+        color: $Base;
+        left: 65px;
+    }
+}
+
+.form{
+    background-color: $Base;
+    height: 450px;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 15px;
+        text-align: justify;
+    }
+    .boton{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #25d366;
+        border: none;
+        display: flex;
+        font-size: 18px;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        color: $Base;
+        border-radius: 15px;
+        width: 250px;
+        height: 35px;
+        cursor: pointer;
+    }
+}
+
+@keyframes opening {
+    20%{
+        max-width: 320px;
+        width: 320px;
+        height: 3.2rem;
+        max-height: 60px;
+    }
+    60%{
+        max-width: 320px;
+        width: 320px;
+        border-radius: 0px;
+        height: 3.2rem;
+        max-height: 60px;
+    }
+    100%{
+        max-width: 320px;
+        width: 320px;
+        border-radius: 0px;
+        max-height: 500px;
+        height: 500px;
+    }
+}
+
+@keyframes closing {
+    0%{
+        max-width: 320px;
+        width: 320px;
+        border-radius: 0px;
+        max-height: 500px;
+        height: 500px;
+    }
+    20%{
+        max-width: 320px;
+        width: 320px;
+        border-radius: 0px;
+        height: 3.2rem;
+        max-height: 60px;
+    }
+    30%{
+        border-radius: 25px;
+        width: 19vw;
+        max-width: 290px;
+        height: 3.2rem;
+        max-height: 60px;
+    }
+    100%{
+        border-radius: 25px;
+        width: 19vw;
+        max-width: 290px;
+        height: 3.2rem;
+        max-height: 60px;
+    }
+}
+
+@keyframes noneDisplay {
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes showCard {
+    0%{
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+    }
+    90%{
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+    }
+    95%{
+        opacity: 0.5;
+        height: 0px;
+        width: 325px;
+    }
+    100%{
+        opacity: 1;
+        height: 500px;
+        width: 325px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .whatsappContainer{
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        .mobileTitle{
+            display: none;
+        }
+        .displaynt{
+            opacity: 0;
+        }
+        @keyframes closing {
+            0%{
+                max-width: 320px;
+                width: 320px;
+                border-radius: 0px;
+                max-height: 500px;
+                height: 500px;
+            }
+            20%{
+                max-width: 320px;
+                width: 320px;
+                border-radius: 0px;
+                height: 3.2rem;
+                max-height: 60px;
+            }
+            30%{
+                border-radius: 25px;
+                width: 70px;
+                max-width: 290px;
+                height: 3.2rem;
+                max-height: 60px;
+            }
+            100%{
+                border-radius: 25px;
+                width: 70px;
+                max-width: 290px;
+                height: 3.2rem;
+                max-height: 60px;
+            }
+        }
+    }
+    
+}

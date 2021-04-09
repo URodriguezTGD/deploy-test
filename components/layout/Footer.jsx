@@ -1,8 +1,17 @@
 import React from "react";
 import WhiteLogo from '../brand/WhiteLogo'
 
+// imports i18n
+import { useRouter } from 'next/router';
+import es from '../../locales/Footer/Footer_es';
+import en from '../../locales/Footer/Footer_en';
 
 export default function Footer() {
+    // Selecting language
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'es' ? es : en;
+
     return (
         <footer className="page-footer">
             <div className="container">
@@ -17,13 +26,13 @@ export default function Footer() {
                         </div>
                         <ul>
                             <li>
-                                <a href='/' className="grey-text text-lighten-4">
-                                    Aviso de Privacidad
+                                <a href={ locale === 'es' ? '/privacy' : '/en/privacy'} className="grey-text text-lighten-4">
+                                    {t.privacidad}
                                 </a>
                             </li>
                             <li>
                                 <a href='/terms-and-conditions' className="grey-text text-lighten-4">
-                                    Términos y Condiciones
+                                    {t.terminos}
                                 </a>
                             </li>
                         </ul>
@@ -31,14 +40,14 @@ export default function Footer() {
                     </div>
                     <div className="col l1 s12 hide-on-small-only"><hr style={{width:'1px', height:'10em', margin:'0 0px'}} className='white'/></div>
                     <div className="col l3 s12">
-                        <h5 className="white-text">Mexicali, BC</h5>
+                        <h5 className="white-text">{t.mxli}</h5>
                         <ul>
                             <li>
                                 <a
                                     className="grey-text text-lighten-3"
                                     href="#!"
                                 >
-                                    mexicali@braintax.mx
+                                    {t.mxliEmail}
                                 </a>
                             </li>
                             <li>
@@ -46,20 +55,20 @@ export default function Footer() {
                                     className="grey-text text-lighten-3"
                                     href="#!"
                                 >
-                                    +52 686 123 4567
+                                    {t.mxliTelefono}
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div className="col l3 s12">
-                        <h5 className="white-text">CDMX</h5>
+                        <h5 className="white-text">{t.cdmx}</h5>
                         <ul>
                             <li>
                                 <a
                                     className="grey-text text-lighten-3"
                                     href="#!"
                                 >
-                                    cdmx@braintax.mx
+                                    {t.cdmxEmail}
                                 </a>
                             </li>
                             <li>
@@ -67,7 +76,7 @@ export default function Footer() {
                                     className="grey-text text-lighten-3"
                                     href="#!"
                                 >
-                                    +52 55 2112 3456
+                                    {t.cdmxTelefono}
                                 </a>
                             </li>
                         </ul>
@@ -76,9 +85,9 @@ export default function Footer() {
             </div>
             <div className="footer-copyright">
                 <div className="container">
-                    © 2021 BrainTax
+                    {t.copy}
                     <a className="grey-text text-lighten-4 right" href="#!">
-                        More Links
+                        {t.links}
                     </a>
                 </div>
             </div>

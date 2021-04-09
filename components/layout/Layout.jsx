@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import { WhatsApp } from "./WhatsApp";
 
 export default function Layout({ children }) {
     return (
@@ -35,6 +36,7 @@ export default function Layout({ children }) {
             </Head>
             <NavBar />
             <main>{children}</main>
+            <WhatsApp />
             <Footer />
         </>
     );

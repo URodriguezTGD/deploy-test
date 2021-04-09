@@ -50,6 +50,30 @@ nav li a .none {
   display: none;
 }
 
+nav .selector {
+  background-color: #008cc7;
+  color: #ffffff;
+  position: relative;
+  top: 1rem;
+  border-radius: 10px;
+  height: 2.5rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .selector:hover {
+  background-color: #00458a;
+}
+
 nav .nav-menu-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,6 +153,12 @@ p {
   }
   nav {
     position: fixed;
+  }
+  nav .selector {
+    width: 10vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   nav .ham-container {
     position: absolute;

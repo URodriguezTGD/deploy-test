@@ -42,6 +42,22 @@ nav {
       display: none;
     }
   }
+  .selector{
+    background-color: $accent;
+    color: $Base;
+    position: relative;
+    top: 1rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .selector:hover{
+    background-color: $accentDark;
+  }
   .nav-menu-mobile{
     display: flex;
     flex-direction: column;
@@ -108,6 +124,11 @@ p {
   }
   nav{
     position: fixed;
+    .selector{
+      width: 10vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     .ham-container{
       position: absolute;
       left: 7.5%;

@@ -1,11 +1,20 @@
 import React from 'react'
 import aboutUsStyles from "../styles/AboutUs.module.css";
 
+// imports i18n
+import { useRouter } from 'next/router';
+import es from '../locales/AboutUs/AboutUs_es';
+import en from '../locales/AboutUs/AboutUs_en';
+
 export const AboutUs = () => {
+    // Selecting language
+    const router = useRouter();
+    const { locale } = router;
+    const t = locale === 'es' ? es : en;
     return (
         <div className={aboutUsStyles.container}>
-            <h2>Equipo BrainTax</h2>
-            <p>Somos una oficina de servicios legales dirigida a individuos y empresas, ofreciendo nuestra experiencia en la entrega de soluciones que resulten flexibles, transparentes y sin costos innecesarios. Enfocándonos en la práctica del derecho Administrativo, Corporativo y Fiscal.</p>
+            <h2>{t.title}</h2>
+            <p>{t.desc}</p>
         </div>
     )
 }
