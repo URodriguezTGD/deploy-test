@@ -3,10 +3,10 @@ export default {
     subtitle: 'Fill in your data',
     desc: 'We appreciate your trust and we are at your service, we will contact you as soon as possible.',
     nombre: 'Name',
-    nombreDesc: 'Enter your name',
+    nombreDesc: 'Name and LastName',
     numero: 'WhatsApp Nº',
-    numeroDesc: 'Enter your phone number',
+    numeroDesc: 'Phone number',
     mensaje: 'Message',
-    mensajeDesc: 'Enter your message',
+    mensajeDesc: 'Message',
     boton: 'Start chatting'
 }

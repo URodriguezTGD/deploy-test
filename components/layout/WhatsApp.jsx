@@ -38,11 +38,11 @@ export const WhatsApp = () => {
                     <h6>{t.subtitle}</h6>
                     <p>{t.desc}</p>
                     <form autoComplete="off">
-                        <label htmlFor="whatsNombre">{t.nombre}</label>
+                        {/* <label htmlFor="whatsNombre">{t.nombre}</label> */}
                         <input type="text" name="whatsNombre" id="whatsNombre" placeholder={t.nombreDesc} value={nombre} onChange={e => setNombre(e.target.value)} required />
-                        <label htmlFor="whatsNumero">{t.numero}</label>
+                        {/* <label htmlFor="whatsNumero">{t.numero}</label> */}
                         <input type="text" name="whatsNumero" id="whatsNumero" placeholder={t.numeroDesc} value={numero} onChange={e => setNumero(e.target.value)} />
-                        <label htmlFor="whatsMensaje">{t.mensaje}</label>
+                        {/* <label htmlFor="whatsMensaje">{t.mensaje}</label> */}
                         <textarea id="whatsMensaje" name="whatsMensaje" placeholder={t.mensajeDesc} className="materialize-textarea" value={message} onChange={e => setMessage(e.target.value)} />
                         <a className={WhatsAppStyle.boton} 
                             href={`https://web.whatsapp.com/send?phone=526862717040&text=${message}`}

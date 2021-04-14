@@ -3,10 +3,10 @@ export default {
     subtitle: 'Completa con tus datos',
     desc: 'Agradecemos tu confianza y estamos a tus órdenes, nos comunicaremos contigo a la brevedad.',
     nombre: 'Nombre',
-    nombreDesc: 'Escribe tu nombre',
+    nombreDesc: 'Nombre y apellido',
     numero: 'Nº de WhatsApp',
-    numeroDesc: 'Escribe tu número, incluya código',
+    numeroDesc: 'Número telefonico (+52)',
     mensaje: 'Mensaje',
-    mensajeDesc: 'Escribe tu mensaje',
+    mensajeDesc: 'Mensaje',
     boton: 'Iniciar Conversación'
 }
