@@ -21,6 +21,11 @@ $gray: #ccc;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
+            .error{
+              color: red;
+              font-size: 13px;
+              font-weight: bold;
+            }
             .terms{
                 padding-left: 10px;
                 font-size: 16px;
