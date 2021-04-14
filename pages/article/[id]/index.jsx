@@ -29,7 +29,7 @@ const article = ({ article }) => {
 };
 
 export const getStaticProps = async (context) => {
-    const query = groq `*[_type == "post" && slug.current == $slug]{
+    const query = groq `*[_type == "post" && !(_id in path("drafts.**")) && slug.current == $slug]{
         ...,
         "id":_id,
         title,

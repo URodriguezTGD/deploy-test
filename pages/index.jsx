@@ -23,7 +23,7 @@ export default function Home({articles}) {
 }
 
 export const getStaticProps = async () => {
-    const query = groq`*[_type == "post"][]{
+    const query = groq`*[_type == "post" && !(_id in path("drafts.**"))][]{
         "id":_id,
         title,
         "textContent":body[_type match 'block' && children[0].text != ''].children[].text,
