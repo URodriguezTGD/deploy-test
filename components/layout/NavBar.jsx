@@ -16,8 +16,7 @@ export default function NavBar() {
 
     const changeLanguage = () => {
         const locale = current === 'es' ? 'en' : 'es';
-        console.log(`/${locale}${router.pathname}`)
-        router.push(`/${locale}${router.pathname}`);
+        router.push(router.asPath,router.asPath,{ locale: locale });
       };
 
     const [menuClicked, setMenuClicked] = useState(false);

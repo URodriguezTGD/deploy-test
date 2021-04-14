@@ -45,7 +45,7 @@ export const WhatsApp = () => {
                         <label htmlFor="whatsMensaje">{t.mensaje}</label>
                         <textarea id="whatsMensaje" name="whatsMensaje" placeholder={t.mensajeDesc} className="materialize-textarea" value={message} onChange={e => setMessage(e.target.value)} />
                         <a className={WhatsAppStyle.boton} 
-                            href={`https://web.whatsapp.com/send?phone=526861123010&text=${message}`}
+                            href={`https://web.whatsapp.com/send?phone=526862717040&text=${message}`}
                             target="_blank"
                             onClick={()=>{
                                 setIsOpen(false);
