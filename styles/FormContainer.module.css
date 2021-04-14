@@ -25,6 +25,12 @@
   overflow: hidden;
 }
 
+.formContainer .form .row .error {
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .formContainer .form .row .terms {
   padding-left: 10px;
   font-size: 16px;
