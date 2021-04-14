@@ -6,9 +6,9 @@ export const ServiceContainer = ({title, services, gray}) => {
     return (
         <div className={ gray ? `${serviceContainerStyle.serviceContainer} ${serviceContainerStyle.grayBackground}` : serviceContainerStyle.serviceContainer }>
             <h2>{title}</h2>
-            { services.map(service => {
+            { services.map((service, index) => {
                 return(
-                    <Service src={service.src} title={service.title} desc={service.desc}  reverse={service.reverse} small={service.small}/>
+                    <Service key={index} src={service.src} title={service.title} desc={service.desc} reverse={service.reverse} small={service.small}/>
             )})}
         </div>
     )

@@ -42,6 +42,15 @@ export default function Footer() {
                     <div className="col l3 s12">
                         <h5 className="white-text">{t.mxli}</h5>
                         <ul>
+                        <li>
+                                <a
+                                    className="grey-text text-lighten-3"
+                                    href="#!"
+                                >
+                                    {t.mxliDir}
+                                </a>
+                            </li>
+                            <br />
                             <li>
                                 <a
                                     className="grey-text text-lighten-3"
@@ -63,6 +72,15 @@ export default function Footer() {
                     <div className="col l3 s12">
                         <h5 className="white-text">{t.cdmx}</h5>
                         <ul>
+                        <li>
+                                <a
+                                    className="grey-text text-lighten-3"
+                                    href="#!"
+                                >
+                                    {t.cdmxDir}
+                                </a>
+                            </li>
+                            <br />
                             <li>
                                 <a
                                     className="grey-text text-lighten-3"

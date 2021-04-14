@@ -54,6 +54,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
   .selector:hover{
     background-color: $accentDark;
