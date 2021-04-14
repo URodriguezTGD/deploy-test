@@ -9,8 +9,15 @@ export const ArticleGrid = ({articles}) => {
         <div className={articleStyles.container}>
             <div className={articleStyles.grid}>
                 {
-                    articles.map((article) => (<ArticleItem key={article.id} article={article} />)  )
-                    // console.log(`articles`, articles)
+                    articles.length > 0
+                    ?
+                    articles.map((article) => (<ArticleItem key={article.id} article={article} />))
+                    :
+                    <div className={articleStyles.emptyBlog}>
+                        <span className="mdi mdi-post-outline"></span>
+                        <h2>Bienvenido a nuestro blog!</h2>
+                        <p>Estamos trabajando en la publicación de nuestros artículos. Pronto, aquí encontrarás las noticias más importantes del área legal.</p>
+                    </div>
                 }
             </div>
         </div>
