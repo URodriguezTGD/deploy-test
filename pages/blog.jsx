@@ -1,7 +1,8 @@
 import Head from "next/head";
-import React from "react";
 import { ArticleGrid } from "../components/ArticleGrid";
 import { TitleSection } from "../components/TitleSection";
+import groq from "groq";
+import client from "../client";
 
 // imports i18n
 import { useRouter } from 'next/router';
@@ -27,12 +28,14 @@ export default function blog({ articles }) {
     );
 }
 
-export const getStaticProps = async () => {
-    const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts?_limit=24`
-    );
-    const articles = await res.json();
-
+export const getStaticProps = async (context) => {
+    const query = groq`*[_type == "post" && !(_id in path("drafts.**"))]{
+        "id":_id,
+        title,
+        "textContent":body[_type match 'block' && children[0].text != ''].children[].text,
+        "slug":slug.current,
+    }`;
+    const articles = await client.fetch(query);
     return {
         props: {
             articles,

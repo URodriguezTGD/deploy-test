@@ -5,6 +5,8 @@ import { Hero } from "../components/Hero";
 import { AboutUs } from "../components/AboutUs";
 import styles from "../styles/Home.module.scss";
 import { Services } from "../components/Services";
+import groq from 'groq';
+import client from "../client";
 
 export default function Home({articles}) {
     return (
@@ -21,12 +23,16 @@ export default function Home({articles}) {
 }
 
 export const getStaticProps = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-    const articles = await res.json();
-
+    const query = groq`*[_type == "post" && !(_id in path("drafts.**"))][]{
+        "id":_id,
+        title,
+        "textContent":body[_type match 'block' && children[0].text != ''].children[].text,
+        "slug":slug.current
+    }`;
+    const articles = await client.fetch(query);
     return {
-        props:{
-            articles
-        }
-    }
+        props: {
+            articles,
+        },
+    };
 }

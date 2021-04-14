@@ -1,5 +1,6 @@
 .container {
   padding: 4em 2em 6em 4em;
+  background: #f7f7f7;
 }
 
 .slider {
@@ -130,6 +131,20 @@
   font-size: 14px;
   color: #008cc7;
   margin-bottom: 2em;
+}
+
+.emptyBlog {
+  text-align: center;
+  max-width: 30vw;
+}
+
+.emptyBlog span {
+  font-size: 20em;
+  color: #dedede;
+}
+
+.emptyBlog h2 {
+  margin-top: -50px;
 }
 
 @media (max-width: 600px) {

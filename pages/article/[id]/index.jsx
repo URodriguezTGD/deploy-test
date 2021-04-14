@@ -1,40 +1,62 @@
-import React from 'react'
+import React from "react";
 import { useRouter } from "next/router";
-import Link from 'next/link';
+import Link from "next/link";
+import client from "../../../client";
+import groq from "groq";
 
-export const article = ({article}) => {
-    // const router = useRouter();
-    // const {id} = router.query;
+const article = ({ article }) => {
     return (
         <>
-            <h1>{ article.title }</h1>
-            <p>{ article.body }</p>
-            <br/>
-            <Link href='/'>Go back</Link>
+            {article.map(a => {
+                return(
+                    <div key={a.id}>
+                        <h1>{a.title}</h1>
+                        <div>
+                            {
+                                a.textContent !== null
+                                ?
+                                a.textContent.map(t => <p>{t}</p>)
+                                :
+                                'Este artículo aún no tiene contenido.'
+                            }
+                        </div>
+                    </div>
+                )
+            })}
+            <Link href="/">Go back</Link>
         </>
-    )
-}
+    );
+};
 
 export const getStaticProps = async (context) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${ context.params.id }`)
-    const article = await res.json();
+    const query = groq `*[_type == "post" && !(_id in path("drafts.**")) && slug.current == $slug]{
+        ...,
+        "id":_id,
+        title,
+        "textContent":body[_type match 'block' && children[0].text != ''].children[].text,
+        "slug":slug.current,
+    }`;
+    const params = {slug:context.params.id}
+    let article =  await client.fetch(query, params);
     return {
         props:{
             article
         }
     }
-}
+    };
+
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`)
-    const articles = await res.json();
-    const ids = articles.map(article => article.id);
-    const paths = ids.map(id => ({params:{id:id.toString()}}));
-
+    const query = groq`*[_type == "post"][]{
+        "slug":slug.current
+    }`;
+    const articles = await client.fetch(query);
+    const slugs = articles.map((article) => article.slug);
+    const paths = slugs.map((slug) => ({ params: { id: slug } }));
     return {
         paths,
-        fallback:false,
-    }
-}
+        fallback: false,
+    };
+};
 
 export default article;

@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@sanity/client": "^2.7.1",
+    "groq": "^2.2.6",
     "materialize-css": "^1.0.0-rc.2",
     "next": "10.1.2",
     "react": "17.0.2",
