@@ -1,0 +1,47 @@
+@import 'colors';
+.container {
+    padding: 0 30% 2em 30%;
+    @media screen and (max-width: 992px){
+        padding: 10%;
+    }
+    h1{
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+.mainImage{
+    width: 100%;
+}
+.body{
+    h1{
+        font-size: 32px;
+    }
+    p{
+        margin-bottom: 3em;
+    }
+}
+
+.published{
+    color: $accent;
+    border-top: 1px solid $accent;
+    border-bottom: 1px solid $accent;
+    display: flex;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    img {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    p{
+        margin: 14px 0 0 0;
+    }
+    // background: $Light;
+    // padding: 1em 2em;
+    // border-radius: 10px;
+    // // text-align: end;
+}
+.avatar {
+    height: 5em;
+    border-radius: 50px;
+}
