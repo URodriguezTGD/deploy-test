@@ -1,0 +1,52 @@
+.container {
+  padding: 0 30% 2em 30%;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 10%;
+  }
+}
+
+.container h1 {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.mainImage {
+  width: 100%;
+}
+
+.body h1 {
+  font-size: 32px;
+}
+
+.body p {
+  margin-bottom: 3em;
+}
+
+.published {
+  color: #008cc7;
+  border-top: 1px solid #008cc7;
+  border-bottom: 1px solid #008cc7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.published img {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.published p {
+  margin: 14px 0 0 0;
+}
+
+.avatar {
+  height: 5em;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=Post.module.css.map */
