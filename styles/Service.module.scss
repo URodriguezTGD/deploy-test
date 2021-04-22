@@ -15,7 +15,9 @@
     }
     
 }
+// @media screen and (max-width: 992px){
 
+// }
 @media screen and (min-width: 992px){
     .serviceContainer{
         flex-direction: row;
@@ -43,8 +45,66 @@
         .reverseText{
             margin-right: 50px;
         }
+        
+        
     }
     .reverse{
         flex-direction: row-reverse;
     }
+
 }
+@media screen and (max-width: 1662px){
+    .serviceContainer{
+        // align-content: center;
+        // justify-content: center;
+        padding-left: 28%;
+        padding-right: 28%;
+        // p{
+        //     text-align: center;
+        // }
+    }
+
+}
+// @media screen and (min-width: 992px){
+    
+
+// }
+// @media screen and (min-width: 992px){
+//     .serviceContainer{
+//         flex-direction: row;
+//         .title{
+//             display: none;
+//         }
+//         .par{
+//             display: none;
+//         }
+//         .imageContainerSmall{
+//             max-width: 150px;
+//             max-height: 100px;
+//         }
+//         .imageContainerMed{
+//             max-width: 300px;
+//             max-height: 250px;
+//         }
+//         .serviceText{
+//             display: flex;
+//             flex-direction: column;
+//             position: relative;
+//             width: 75%;
+//             left: 4%;
+//         }
+//         .reverseText{
+//             margin-right: 50px;
+//         }
+        
+        
+//     }
+//     .reverse{
+//         flex-direction: row-reverse;
+//     }
+//     .serviceContainer{
+//         p{
+//             text-align: center;
+//         }
+//     }
+// }

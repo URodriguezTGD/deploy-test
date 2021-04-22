@@ -1,5 +1,18 @@
+@import 'colors';
+
 .mapsContainer{
-    margin-bottom: 50px;
+    display: flex;
+    background: $Light;
+    padding: 4em 12vw 6em 12vw;
+    p, h2{
+        text-align: center;
+    }
+    div{
+        width: 50%;
+    }
+    iframe{
+        margin-top: 3em;
+    }
     .map{
         position: relative;
         left: 50%;
@@ -7,4 +20,11 @@
         width: 75%;
         height: 50vh;
     }
+    @media screen and (max-width: 1075px){
+        display: block;
+        div{
+            width: 100%;
+        }
+    }
+    
 }

@@ -68,4 +68,11 @@
             flex-direction: row-reverse;
   }
 }
+
+@media screen and (max-width: 1662px) {
+  .serviceContainer {
+    padding-left: 28%;
+    padding-right: 28%;
+  }
+}
 /*# sourceMappingURL=Service.module.css.map */

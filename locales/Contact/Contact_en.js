@@ -1,5 +1,5 @@
 export default {
-    head: 'Contact | BrainTax',
+    head: 'BrainTax | Contact us',
     title: 'Contact us',
     desc: 'We will gladly contact you as soon as possible.',
     sectionTitle: 'Offices',

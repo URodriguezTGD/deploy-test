@@ -9,6 +9,6 @@ export default {
     cdmxDir: 'Avenida Insurgentes Sur número 1431 Piso 10 Interior A, Col. Insurgentes Mixcoac, C.P. 03920 Benito Juárez',
     cdmxEmail: 'cdmx@braintax.mx',
     cdmxTelefono: '+52 55 8852 2772',
-    copy: '© 2021 BrainTax',
+    copy: '© 2021 BrainTax | Legal Services.',
     links: 'All rights reserved'
 }

@@ -12,7 +12,7 @@ export const AboutUs = () => {
     const { locale } = router;
     const t = locale === 'es' ? es : en;
     return (
-        <div className={aboutUsStyles.container}>
+        <div className={`${ aboutUsStyles.container } container`}>
             <h2>{t.title}</h2>
             <p>{t.desc}</p>
         </div>

@@ -1,4 +1,4 @@
 export default {
-    head: 'Privacy policy | BrainTax',
+    head: 'BrainTax | Privacy policy',
     title: 'Privacy policy'
 }

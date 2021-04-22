@@ -1,5 +1,5 @@
 export default {
-    title: 'Services',
+    title: 'Our Services',
     desc: 'Deliveries committed to flexibility, transparency and no unnecessary costs.',
     services: [
         {id: 'administrativo', src:'/images/administrativo.jpg', title:'Administrative Law', desc:'Specialized attention in all types of controversies arising from the activity of the State, whether federal or local.', reverse:false, small:true},

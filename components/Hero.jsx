@@ -5,6 +5,7 @@ import heroStyles from "../styles/Hero.module.css";
 import { useRouter } from 'next/router';
 import es from '../locales/Hero/Hero_es';
 import en from '../locales/Hero/Hero_en';
+import Link from "next/link";
 
 export const Hero = () => {
 
@@ -19,7 +20,7 @@ export const Hero = () => {
                 <h1 className={heroStyles.heroTitle}>{t.title}</h1>
                 {/* <p></p> */}
 
-                <a href="/contact">{t.button}</a>
+                <Link href="/contact"><a>{t.button}</a></Link>
             </div>
         </div>
     );

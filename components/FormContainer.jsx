@@ -28,9 +28,9 @@ export const FormContainer = () => {
 			},
 			body: JSON.stringify(values),
 		});
-		console.log(`result`, result);
+		// console.log(`result`, result);
 		if (!result.ok) {
-			console.log(`error ${result.status}: ${result.statusText}`);
+			// console.log(`error ${result.status}: ${result.statusText}`);
 		} else {
 			reset();
 		}

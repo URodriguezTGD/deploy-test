@@ -1,5 +1,21 @@
 .mapsContainer {
-  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f7f7f7;
+  padding: 4em 12vw 6em 12vw;
+}
+
+.mapsContainer p, .mapsContainer h2 {
+  text-align: center;
+}
+
+.mapsContainer div {
+  width: 50%;
+}
+
+.mapsContainer iframe {
+  margin-top: 3em;
 }
 
 .mapsContainer .map {
@@ -9,5 +25,14 @@
           transform: translateX(-50%);
   width: 75%;
   height: 50vh;
+}
+
+@media screen and (max-width: 1075px) {
+  .mapsContainer {
+    display: block;
+  }
+  .mapsContainer div {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=MapsContainer.module.css.map */

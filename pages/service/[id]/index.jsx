@@ -26,7 +26,7 @@ function index() {
                     case "corporativo": return (<ServiceContainer title={t.titleCorpo} services={t.servicesCorpo} gray={true} />);
                     case "fiscal":  return (<ServiceContainer title={t.titleFiscal} services={t.servicesFiscal} gray={true} />);
             }
-      })()}
+            })()}
         </div>
     )
 }

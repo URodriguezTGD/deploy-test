@@ -1,13 +1,13 @@
 export default {
-    head: 'Servicios | BrainTax',
+    head: 'BrainTax | Servicios',
     title: 'Soluciones',
     desc: 'Expertos en la práctica del derecho administrativo, corporativo y fiscal.',
     titleAdmin: 'Derecho Administrativo',
-    headAdmin: 'Derecho Administrativo | BrainTax',
+    headAdmin: 'BrainTax | Derecho Administrativo',
     titleCorpo: 'Derecho Corporativo',
-    headCorpo: 'Derecho Corporativo | BrainTax',
+    headCorpo: 'BrainTax | Derecho Corporativo',
     titleFiscal: 'Derecho Fiscal',
-    headFiscal: 'Derecho Fiscal | BrainTax',
+    headFiscal: 'BrainTax | Derecho Fiscal',
     servicesAdmin: [
         {src: '/images/fiscal.jpg', title:'Litigio', desc:'Ofrecemos atención especializada en todo tipo de controversias que deriven de la actividad del Estado, ya sea federal o local. Esto sea a través de los recursos administrativos ante la misma autoridad o a través de la via judicial.', reverse: false, small: false },
         {src: '/images/administrativo.jpg', title:'Regulatorio', desc:'En el ámbito regulatorio, te asesoramos en materia de regulación pública en todo tipo de industrias, y los apoyamos en sus trámites y/o gestiones ante las autoridades competentes en todos los niveles de gobierno.', reverse: true, small: false }

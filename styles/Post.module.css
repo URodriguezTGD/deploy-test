@@ -14,7 +14,10 @@
 }
 
 .mainImage {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  max-height: 75vh;
 }
 
 .body h1 {
@@ -23,6 +26,12 @@
 
 .body p {
   margin-bottom: 3em;
+}
+
+.body img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
 }
 
 .published {

@@ -11,9 +11,7 @@ import en from '../locales/ArticleList/ArticleList_en';
 export const ArticleItem = ({article}) => {
     const router = useRouter();
     const {locale} = router;
-    console.log("🚀 ~ file: ArticleItem.jsx ~ line 14 ~ ArticleItem ~ locale", locale)
     const t = locale === 'es' ? es : en;
-    
     const [postImageUrl, setPostImageUrl] = useState('');
     useEffect(() => {
         const imgBuilder = ImageBuilder({
@@ -24,21 +22,18 @@ export const ArticleItem = ({article}) => {
     }, [article.image]);
     return (
         <Link href={`/article/[id]`} as={`/article/${article.slug}`}>
-            <div className={articleStyle.card}>
-                {postImageUrl && <img src={postImageUrl} className={articleStyle.cardImage} /> }
-                {/* <Image 
-                    src='/images/bt-services.png'
-                    alt="Picture of the author"
-                    width={295}
-                    height={213}
-                    className={articleStyle.img}
-                /> */}
-                <div className={articleStyle.cardContent}>
-                    <h3>{article.title}</h3>
-                    <p>{article.textContent}</p>
-                    <span className='right'>Leer mas <span className='mdi mdi-arrow-right'></span></span>
+            <a>
+                <div className={articleStyle.card}>
+                    <div  className={`${articleStyle.cardImage}`} >
+                        { postImageUrl && <img src={postImageUrl} className={articleStyle.articleImage} /> }
+                    </div>
+                    <div className={articleStyle.cardContent}>
+                        <h3>{article.title}</h3>
+                        <p>{article.textContent}</p>
+                        <span className='right'>Leer mas <span className='mdi mdi-arrow-right'></span></span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </Link>
     )
 }

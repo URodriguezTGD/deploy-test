@@ -1,4 +1,4 @@
 export default{
-    head: 'Aviso de privacidad | BrainTax',
+    head: 'BrainTax | Aviso de privacidad',
     title: 'Aviso de privacidad'
 }

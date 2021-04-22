@@ -1,13 +1,13 @@
 export default {
-    head: 'Services | BrainTax',
+    head: 'BrainTax | Services',
     title: 'Solutions',
     desc: 'Experts in the practice of administrative, corporate and tax law.',
     titleAdmin: 'Administrative Law',
-    headAdmin: 'Administrative Law | BrainTax',
+    headAdmin: 'BrainTax | Administrative Law',
     titleCorpo: 'Corporate Law',
-    headCorpo: 'Corporate Law | BrainTax',
+    headCorpo: 'BrainTax | Corporate Law',
     titleFiscal: 'Fiscal Law',
-    headFiscal: 'Fiscal Law | BrainTax',
+    headFiscal: 'BrainTax | Fiscal Law',
     servicesAdmin: [
         {src: '/images/fiscal.jpg', title:'Litigation', desc:'We offer specialized attention in all types of controversies arising from the activity of the State, whether federal or local. This is either through administrative appeals before the same authority or through the judicial channel.', reverse: false, small: false },
         {src: '/images/administrativo.jpg', title:'Regulatory', desc:'In the regulatory field, we advise you in matters of public regulation in all types of industries, and we support you in your procedures and/or formalities before the competent authorities at all levels of government.', reverse: true, small: false }

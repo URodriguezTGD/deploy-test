@@ -7,16 +7,8 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 0.5em;
-  height: 0px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, right top, from(#00458a), to(#008cc7));
-  background: linear-gradient(to right, #00458a, #008cc7);
-  border-radius: 5px;
-  height: 1px;
+#mxli, #cdmx {
+  scroll-margin-top: 100px;
 }
 
 .page-footer {
@@ -72,6 +64,7 @@ nav .selector {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  border: none;
 }
 
 nav .selector:hover {
@@ -132,7 +125,7 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: #00458a;
   font-weight: 600;
 }

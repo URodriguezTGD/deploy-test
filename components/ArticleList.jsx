@@ -4,6 +4,7 @@ import { ArticleItem } from './ArticleItem';
 import { useRouter } from 'next/router';
 import es from '../locales/ArticleList/ArticleList_es';
 import en from '../locales/ArticleList/ArticleList_en';
+import Link from 'next/link';
 
 export const ArticleList = ({articles}) => {
     // Selecting language
@@ -11,50 +12,28 @@ export const ArticleList = ({articles}) => {
     const { locale } = router;
     const t = locale === 'es' ? es : en;
     return (
-        <>
+        <div className={``}>
             {
                 articles.length > 0
                 ?
-                <div className={articleStyles.container}>
-                    <h2 className='center'>{t.title}</h2>
-                    <div className={articleStyles.slider}>
+                <div className={`${articleStyles.container} ${router.pathname === '/' ? 'white' : null}`}>
+                    <Link href={ locale === 'es' ? '/es/blog' : '/en/blog' }>
+                        <a><h2 className='center'>{t.title}</h2></a>
+                    </Link>
+                    <div className={articleStyles.sliderContainer}>
                         <div
                             id="articles-slider"
-                            style={{ display: "inline-flex", overflow: "scroll" }}
+                            className={articleStyles.slider}
                         >
                             {articles.map((article) => (
                                 <ArticleItem key={article.id} article={article} />
                             ))}
                         </div>
                     </div>
-                    <div className={articleStyles.sliderControls}>
-                        <button className='btn-flat'
-                            onClick={(e) => {
-                                document.getElementById("articles-slider").scrollTo({
-                                    top: 0,
-                                    left:document.getElementById("articles-slider").scrollLeft - 1000,
-                                    behavior: "smooth",
-                                });
-                            }}
-                        >
-                            <span className='mdi mdi-arrow-left'></span>
-                        </button>
-                        <button className='btn-flat'
-                            onClick={(e) => {
-                                document.getElementById("articles-slider").scrollTo({
-                                    top: 0,
-                                    left:document.getElementById("articles-slider").scrollLeft + 1000,
-                                    behavior: "smooth",
-                                });
-                            }}
-                        >
-                            <span className='mdi mdi-arrow-right'></span>
-                        </button>
-                    </div>
                 </div>
                 :
                 null
             }
-        </>
+        </div>
     );
 };
