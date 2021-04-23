@@ -14,7 +14,7 @@ $gray: #ccc;
     justify-content: center;
     .form{
         position: relative;
-        max-width: 60vw;
+        max-width: 40vw;
         left: 50%;
         transform: translateX(-50%);
         .row {
@@ -42,16 +42,20 @@ $gray: #ccc;
             height: 40px;
             padding: 10px 10px 10px 90px;
             box-sizing: border-box;
-            border: 1px solid $gray;
+            // border: 1px solid $gray;
             color: #333;
             border-radius: 3px;
             transition: all 0.3s $custom-easing;
+            border-bottom: 1px solid $accent !important;
           }
-          
+          input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+            border-bottom: 1px solid $accent !important;
+          }
           textarea {
             height: auto;
             min-height: 200px;
             padding: 50px 10px 10px 10px;
+            border: 1px solid $accent;
           }
           
           input[type="text"] + label, input[type="password"] + label, textarea + label {
@@ -141,7 +145,7 @@ $gray: #ccc;
           button {
             position: relative;
             overflow: hidden;
-            width: 35vw;
+            width: 25em;
             height: 40px;
             left: 50%;
             line-height: 40px;
@@ -183,8 +187,21 @@ $gray: #ccc;
               }
             }
           }
+          span{
+            color: #ff7c1f !important;
+          }
     }
 }
+.sended {
+  span{
+    font-size: 5em;
+    color: $accent;
+  }
+  p{
+    text-align: center;
+  }
+}
+
 
 @media screen and (max-width: 992px){
     .formContainer{

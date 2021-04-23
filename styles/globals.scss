@@ -24,6 +24,9 @@ body {
 
 .page-footer {
   background: $accentDark;
+  .col{
+    margin: .8em 0;
+  }
   .footer-copyright{
     background: $accent;
   }
@@ -37,6 +40,7 @@ body {
 }
 nav {
   background: $Base;
+  height: 65px;
   z-index: 2;
   li a{
     color: $accent;
@@ -44,6 +48,9 @@ nav {
     .none{
       display: none;
     }
+  }
+  li a:hover{
+    background: $Light;
   }
   .selector{
     background-color: $accent;

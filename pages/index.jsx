@@ -36,7 +36,7 @@ export default function Home({articles}) {
 }
 
 export const getStaticProps = async () => {
-    const query = groq`*[_type == "post" && !(_id in path("drafts.**"))][]{
+    const query = groq`*[_type == "post" && !(_id in path("drafts.**"))][0..9]{
         "id":_id,
         title,
         "image":mainImage,

@@ -14,7 +14,7 @@ export default async (req, res) => {
 			];
 
 			let result = await fetch(
-				`https://${process.env.PROJECT_ID}.api.sanity.io/v${process.env.API_VERSION}/data/mutate/${process.env.DATASET}`,
+				`https://${process.env.NEXT_PUBLIC_PROJECT_ID}.api.sanity.io/v${process.env.API_VERSION}/data/mutate/${process.env.NEXT_PUBLIC_DATASET}`,
 				{
 					method: "post",
 					headers: {

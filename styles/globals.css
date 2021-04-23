@@ -15,6 +15,10 @@ body {
   background: #00458a;
 }
 
+.page-footer .col {
+  margin: .8em 0;
+}
+
 .page-footer .footer-copyright {
   background: #008cc7;
 }
@@ -30,6 +34,7 @@ body {
 
 nav {
   background: #ffffff;
+  height: 65px;
   z-index: 2;
 }
 
@@ -40,6 +45,10 @@ nav li a {
 
 nav li a .none {
   display: none;
+}
+
+nav li a:hover {
+  background: #f7f7f7;
 }
 
 nav .selector {

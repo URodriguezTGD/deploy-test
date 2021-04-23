@@ -144,7 +144,7 @@ export const getStaticProps = async (context) => {
     const params = { slug: context.params.id };
     let article = await client.fetch(query, params);
 
-    const sliderArticles = groq`*[_type == "post" && !(_id in path("drafts.**")) && slug.current != $slug][]{
+    const sliderArticles = groq`*[_type == "post" && !(_id in path("drafts.**")) && slug.current != $slug][0..9]{
         "id":_id,
         title,
         "image":mainImage,

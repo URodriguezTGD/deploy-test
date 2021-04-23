@@ -13,7 +13,7 @@
 
 .formContainer .form {
   position: relative;
-  max-width: 60vw;
+  max-width: 40vw;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -49,17 +49,22 @@
   padding: 10px 10px 10px 90px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #ccc;
   color: #333;
   border-radius: 3px;
   -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
   transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+  border-bottom: 1px solid #008cc7 !important;
+}
+
+.formContainer .form input[type="text"]:focus, .formContainer .form input[type="password"]:focus, .formContainer .form textarea:focus {
+  border-bottom: 1px solid #008cc7 !important;
 }
 
 .formContainer .form textarea {
   height: auto;
   min-height: 200px;
   padding: 50px 10px 10px 10px;
+  border: 1px solid #008cc7;
 }
 
 .formContainer .form input[type="text"] + label, .formContainer .form input[type="password"] + label, .formContainer .form textarea + label {
@@ -160,7 +165,7 @@
 .formContainer .form button {
   position: relative;
   overflow: hidden;
-  width: 35vw;
+  width: 25em;
   height: 40px;
   left: 50%;
   line-height: 40px;
@@ -208,6 +213,19 @@
           transform: scale(1);
   -webkit-transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
   transition: all 0.3s cubic-bezier(1, 0.1, 0, 0.9);
+}
+
+.formContainer .form span {
+  color: #ff7c1f !important;
+}
+
+.sended span {
+  font-size: 5em;
+  color: #008cc7;
+}
+
+.sended p {
+  text-align: center;
 }
 
 @media screen and (max-width: 992px) {

@@ -28,7 +28,7 @@ export default function NavBar() {
                     <div className={ menuClicked ? 'nav-wrapper': "nav-wrapper container" }>
                         <Link href={ locale === 'es' ? '/es' : '/en' }>
                             <a
-                                className="brand-logo center blue-text hide-on-small-only"
+                                    className="brand-logo center"
                                 style={{ paddingTop: ".2em" }}
                             >
                                 <Logo1 />

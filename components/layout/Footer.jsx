@@ -24,7 +24,7 @@ export default function Footer() {
                                     <WhiteLogo width={43} height={36} />
                                 </a>
                             </Link>
-                            <hr style={{width:'1px', height:'36px', margin:'0 10px 0 20px'}} className='white'/>
+                            <hr style={{width:'1px', height:'36px', margin:'0 10px 0 20px',display:'block'}} className='white'/>
                             <a href="https://www.Instagram.com/braintaxlegal" target='_blank'><span className="mdi mdi-instagram"></span></a>
                             <a href="https://twitter.com/braintaxlegal" target='_blank'><span className="mdi mdi-twitter"></span></a>
                             <a href="https://www.linkedin.com/company/braintaxlegal" target='_blank'><span className="mdi mdi-linkedin"></span></a>
