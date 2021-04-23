@@ -9,6 +9,7 @@ body {
   font-family: Poppins;
   overflow-x: hidden;
 }
+
 // ::-webkit-scrollbar {
 //   width: 0.5em;
 //   height: 0px;
@@ -37,7 +38,11 @@ body {
   .logo{
     font-size: 3em;
   }
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
 }
+
 nav {
   background: $Base;
   height: 65px;

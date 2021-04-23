@@ -1,12 +1,12 @@
 export default {
     title: 'Contact us anytime',
     subtitle: 'Fill in your data',
-    desc: 'We appreciate your trust and we are at your service, we will contact you as soon as possible.',
+    desc: 'We appreciate your trust and we are at your service. We will contact you as soon as possible.',
     nombre: 'Name',
-    nombreDesc: 'Name and LastName',
+    nombreDesc: 'Enter your name and last name...',
     numero: 'WhatsApp Nº',
-    numeroDesc: 'Phone number',
+    numeroDesc: 'Enter your phone number...',
     mensaje: 'Message',
-    mensajeDesc: 'Message',
+    mensajeDesc: 'Enter your message...',
     boton: 'Start chatting'
 }
