@@ -1,0 +1,26 @@
+# amplify.yml
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands: 
+        - npm ci
+        # Install the Serverless Framework CLI
+        - npm i -g serverless
+        # Copy any existing files from a previous Serverless deployment into our working directory
+        - API_VERSION=$API_VERSION
+        - NEXT_PUBLIC_DATASET=$NEXT_PUBLIC_DATASET
+        - NEXT_PUBLIC_PROJECT_ID=$NEXT_PUBLIC_PROJECT_ID
+        - SANITY_TOKEN=$SANITY_TOKEN
+    build:
+      commands: 
+        # Move into the target Serverless env folder, and deploy the Serverless component 
+        - serverless
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: ./
+    files:
+      - '**/*'
+  cache:
+    - node_modules/**/*
+
