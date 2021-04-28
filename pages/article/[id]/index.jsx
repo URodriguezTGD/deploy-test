@@ -161,6 +161,7 @@ export const getStaticProps = async (context) => {
             article: article[0],
             articles,
         },
+        revalidate: 30
     };
 };
 
