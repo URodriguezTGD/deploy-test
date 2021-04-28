@@ -18,7 +18,7 @@ frontend:
         - serverless
   artifacts:
     # IMPORTANT - Please verify your build output directory
-    baseDirectory: ./
+    baseDirectory: out
     files:
       - '**/*'
   cache:
