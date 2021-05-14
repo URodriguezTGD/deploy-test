@@ -30,13 +30,14 @@ export const FormContainer = () => {
 		});
 		console.log(`result`, result);
 		if (!result.ok) {
-			setMessageSended(true);
+			reset();
 			// console.log(`error ${result.status}: ${result.statusText}`);
 		} else {
 			reset();
+			setMessageSended(true);
 		}
 	};
-
+	
 	return (
 		<div className={FormContainerStyle.formContainer}>
 			{
@@ -44,7 +45,7 @@ export const FormContainer = () => {
 				?
 				<div className={FormContainerStyle.sended}>
 					<span className='mdi mdi-cloud-check'></span>
-					<p>Gracias por contactarnos. Tu mensaje se envió exitosamente. Nos pondremos en contacto contigo lo antes posible. </p>
+					<p>{t.sentMessage}</p>
 				</div>
 				:
 				<form

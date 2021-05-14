@@ -116,7 +116,11 @@ const article = ({ article, articles }) => {
                     (x) => x.language === (locale === "es" ? "es_MX" : "en_US")
                 )}
             />
-            <Link href="/">Go back</Link>
+            <Link href="/">
+                <p className={`${PostStyles.home} ${'mdi mdi-arrow-left-bold'}`}>
+                {(locale === "es" ? "Regresar" : "Go Back")}
+                    </p>
+                </Link>
         </>
     );
 };
