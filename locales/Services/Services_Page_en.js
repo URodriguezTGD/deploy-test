@@ -1,21 +1,20 @@
 export default {
     head: 'BrainTax | Services',
     title: 'Solutions',
-    desc: 'Experts in the practice of administrative, corporate and tax law.',
-    titleAdmin: 'Administrative Law',
-    headAdmin: 'BrainTax | Administrative Law',
+    desc: 'We’re experts in the incorporation of companies in Mexico. Finding solutions in everything related with administrative, corporate and tax law in our country.',
+    titleAdmin: 'Regulatory & Government',
+    headAdmin: 'BrainTax | Regulatory & Government',
     titleCorpo: 'Corporate Law',
     headCorpo: 'BrainTax | Corporate Law',
-    titleFiscal: 'Fiscal Law',
-    headFiscal: 'BrainTax | Fiscal Law',
+    titleFiscal: 'Litigation',
+    headFiscal: 'BrainTax | Litigation',
     servicesAdmin: [
-        {src: '/images/fiscal.jpg', title:'Litigation', desc:'We offer specialized attention in all types of controversies arising from the activity of the State, whether federal or local. This is either through administrative appeals before the same authority or through the judicial channel.', reverse: false, small: false },
-        {src: '/images/administrativo.jpg', title:'Regulatory', desc:'In the regulatory field, we advise you in matters of public regulation in all types of industries, and we support you in your procedures and/or formalities before the competent authorities at all levels of government.', reverse: true, small: false }
+        {src: '/images/fiscal.jpg', title:'', desc:'Our Braintax team have vast experience and knowledge interpreting the Mexican administrative law and regulations. We help our clients to prepare their bidding offers and present through a bidding process held by federal, state or municipal government agencies.', desc2: 'Offering the following services, among others: ', desc3: '» Obtaining authorizations, licences and permits from federal, state or municipal entities.', desc4: '» Representation with verification visit process by federal, state or municipal adminstrative authorities.', reverse: false, small: false }
     ],
     servicesCorpo: [
-        {src: '/images/corporativo.jpg', title:'Litigation', desc:'Regarding corporate law, we provide advice and services in the incorporation of companies through the vehicles established by Mexican law, execution of minutes of meetings, drafting of contracts, among others.', reverse: false, small: false}
+        {src: '/images/corporativo.jpg', title:'', desc:'Braintax office offers assessment to National and Foreign individuals and companies to créate new legal entities in the Mexican territory, giving advise and preparation in a broad range of corporate and comercial agreements and transactions. ', desc2:'Our office offer the following services, among others, we advise in: ',desc3:'» Creation of legal entities ',desc4:'» Bylaws preparation ',desc5:'» Commercial agreements ',desc6:'» Approvals and permits from Federal and State authorities. ',desc7:'» Dealing with many required process before the Tax Administration Service. ',desc8:'» Dealing with Corporate records. ', reverse: false, small: false}
     ],
     servicesFiscal: [
-        {src: '/images/bt-services.png', title:'Litigation', desc:"We provide advisory services, preparing and filing defense actions against the actions of the tax authorities that violate the taxpayer's rights.", reverse: true, small: false }
+        {src: '/images/bt-services.png', title:'', desc2:"The objective of our services is to assist our clients with the preparation and filling of any nullity petition, administrative appeal, or any claim you need before the correspondent Federal, State or Tax adminsitrative agency or court. ", desc: "One of the main practices areas of Braintax are focused on Administrative and Tax proceedings and litigation. ", reverse: true, small: false }
     ]
 }

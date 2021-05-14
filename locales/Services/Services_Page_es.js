@@ -13,9 +13,9 @@ export default {
         {src: '/images/administrativo.jpg', title:'Regulatorio', desc:'En el ámbito regulatorio, te asesoramos en materia de regulación pública en todo tipo de industrias, y los apoyamos en sus trámites y/o gestiones ante las autoridades competentes en todos los niveles de gobierno.', reverse: true, small: false }
     ],
     servicesCorpo: [
-        {src: '/images/corporativo.jpg', title:'Litigio', desc:'En cuanto al derecho corporativo, brindamos asesoría y servicio en la constitución de empresas a través de los vehículos establecidos en las leyes mexicanas, celebración de actas de asamblea, elaboración de contratos, entre otros.', reverse: false, small: false}
+        {src: '/images/corporativo.jpg', title:'', desc:'En cuanto al derecho corporativo, brindamos asesoría y servicio en la constitución de empresas a través de los vehículos establecidos en las leyes mexicanas, celebración de actas de asamblea, elaboración de contratos, entre otros.', reverse: false, small: false}
     ],
     servicesFiscal: [
-        {src: '/images/bt-services.png', title:'Litigio', desc:'Brindamos servicio asesorando, elaborando e interponiendo medios de defensa en contra de las actuaciones de las autoridades fiscales que transgredan los derechos del contribuyente.', reverse: true, small: false }
+        {src: '/images/bt-services.png', title:'', desc:'Brindamos servicio asesorando, elaborando e interponiendo medios de defensa en contra de las actuaciones de las autoridades fiscales que transgredan los derechos del contribuyente.', reverse: true, small: false }
     ]
 }
