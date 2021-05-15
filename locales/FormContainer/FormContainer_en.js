@@ -20,5 +20,6 @@ export default {
     acepto: 'I have read and accept the',
     privacidad: 'privacy policy',
     privacidadLink: '/en/privacy',
-    boton: 'Send'
+    boton: 'Send',
+    sentMessage: 'Thank you for contacting us. Your message was sent succesfully. We\'ll get in touch with you as soon as possible.',
 }

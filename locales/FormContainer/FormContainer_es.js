@@ -20,5 +20,6 @@ export default {
     acepto: 'He leído y acepto el',
     privacidad: 'aviso de privacidad',
     privacidadLink: '/privacy',
-    boton: 'Enviar'
+    boton: 'Enviar',
+    sentMessage: 'Gracias por contactarnos. Tu mensaje se envió exitosamente. Nos pondremos en contacto contigo lo antes posible.',
 }
